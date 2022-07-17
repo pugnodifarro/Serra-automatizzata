@@ -512,32 +512,7 @@ void loop()
 
         swap_minmax(temp_min, temp_max);
         swap_minmax(hum_min, hum_max);
-
-        /*
-          //VALUTARE FUNZIONE CAMBIO AUTOMATICO TEMP_MIN TEMP_MAX
-          if (temp_min > temp_max && flag == false && automatico == false)
-          {
-          if (errore_temp == false)lcd.clear();
-          lcd.print("ERRORE");
-          lcd.setCursor(0, 1);
-          lcd.print("t_min > t_max");
-          errore_temp = true;
-          }
-          else errore_temp = false;
-
-          //VALUTARE FUNZIONE CAMBIO AUTOMATICO HUM_MIN HUM_MAX
-          if (hum_min > hum_max && flag == false && automatico == false)
-          {
-          if (errore_hum == false)lcd.clear();
-          lcd.print("ERRORE");
-          lcd.setCursor(0, 1);
-          lcd.print("h_min > h_max");
-          errore_hum = true;
-          }
-          else errore_hum = false;
-        */
-
-
+        
         //CONTROLLO TEMPERATURA
         if (Temperatura < temp_min && flag_rele == true && automatico == true)digitalWrite(rele_temp, LOW);
         else if (Temperatura >= temp_min && automatico == true)digitalWrite(rele_temp, HIGH);
@@ -721,7 +696,7 @@ void loop()
 
 }
 
-
+/*
 //FUNZIONE INTERRUPT TASTINO
 void cambiaStato()
 {
@@ -732,7 +707,7 @@ void cambiaStato()
   disattiva_allarme_temp = true;
   disattiva_allarme_water = true;
 }
-
+*/
 
 
   //FUNZIONE SWITCH VALORI MIN E MAX

@@ -588,7 +588,7 @@ void loop()
         if (Humidity < hum_min && flag == false && dummy_acqua == false && digitalRead(pin_water) == HIGH)
         {
 
-          if (counter % 100 == 0 || timer < 50)
+          if (counter % 30 == 0 || timer < 7)
           {
 
             if (flag_timer == true)timer = 0;
